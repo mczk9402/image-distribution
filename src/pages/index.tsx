@@ -13,7 +13,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
   return {
     redirect: {
-      permanent: false, // 永続的なリダイレクトかどうか
+      statusCode: 301,
       destination: data.contents[randomNumber].image.url, // リダイレクト先
     },
   };
